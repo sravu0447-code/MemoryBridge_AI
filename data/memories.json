@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "text": "Rahul sent me the AIML project dataset yesterday. I need to finish the model before Friday.",
+        "tags": [
+            "Task",
+            "Study",
+            "People",
+            "Date",
+            "Project"
+        ],
+        "date": "05 Oct 2026",
+        "time": "07:16 PM"
+    },
+    {
+        "id": 2,
+        "text": "i have to finish oops tomorrow",
+        "tags": [
+            "Task",
+            "Date"
+        ],
+        "date": "05 Oct 2026",
+        "time": "09:40 PM"
+    },
+    {
+        "id": 3,
+        "text": "Rahul helped me with my Python assignment today.",
+        "type": "memory",
+        "tags": [
+            "Study",
+            "People",
+            "Date",
+            "AI/ML"
+        ],
+        "people": [
+            "Rahul"
+        ],
+        "task": false,
+        "project": false,
+        "date_reference": "today",
+        "date": "05 Oct 2026",
+        "time": "10:12 PM"
+    }
+]

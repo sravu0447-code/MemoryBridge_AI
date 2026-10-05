@@ -1,0 +1,36 @@
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+
+@app.route("/add-memory", methods=["POST"])
+def add_memory():
+    memory = request.form.get("memory")
+
+    with open("data/memories.txt", "a", encoding="utf-8") as file:
+        file.write(memory + "\n")
+
+    return "Memory saved successfully!"
+
+
+@app.route("/memories")
+def memories():
+    try:
+        with open("data/memories.txt", "r", encoding="utf-8") as file:
+            saved_memories = file.readlines()
+    except FileNotFoundError:
+        saved_memories = []
+
+    return render_template(
+        "memories.html",
+        memories=saved_memories
+    )
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
